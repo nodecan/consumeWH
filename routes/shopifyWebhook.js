@@ -1,7 +1,7 @@
 'use strict'
 const express = require('express');
 const router = express.Router();
-const logger = require('log4js');
+const log4js = require('log4js');
 log4js.configure({ // configure to use all types in different files.
     appenders: [
         {   type: 'file',

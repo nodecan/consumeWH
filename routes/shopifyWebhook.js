@@ -35,6 +35,7 @@ loggerdebug.info('This is Debugger');
 
 router.post('/',function(req,res){
     console.log("received /");
+    console.log(JSON.stringify(req.body));
    loggerdebug.debug("Received a customer update...");
    loggerdebug.debug(req.body);
    res.status(200);

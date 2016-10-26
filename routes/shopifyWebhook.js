@@ -43,13 +43,5 @@ router.post('/',function(req,res){
    loggerdebug.debug("Exit from customer...");
 });
 
-router.post('/customers/update',function(req,res){
-    console.log("received customer update");
-   loggerdebug.debug("Recieved a customer update...");
-   loggerdebug.debug(req.body);
-   res.status(200);
-   res.send();
-   loggerdebug.debug("Exit from customer...");
-});
 
 module.exports = router;

@@ -34,7 +34,8 @@ loggererror.info('This is Error Logger');
 loggerdebug.info('This is Debugger');
 
 
-router.post('/customers',function(req,res){
+router.post('/customers/create',function(req,res){
+    console.log("received customer create");
    loggerdebug.debug("Recieved a customer update...");
    loggerdebug.debug(req.body);
    res.status(200);

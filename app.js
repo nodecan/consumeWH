@@ -5,7 +5,7 @@ const path = require('path');
 const logger = require('log4js');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const shopifyWebhook = require('./routes/shopifyWebhook');
+const shopifyWebhook = require('./routes/shopifyWebhook.js');
 
 const routes = require('./routes/index');
 const users = require('./routes/users'); 
@@ -24,10 +24,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+//app.use('/', routes);
+//app.use('/users', users);
 
-app.use('/webhook',shopifyWebhook);
+app.use('/',shopifyWebhook);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -36,6 +36,7 @@ loggerdebug.info('This is Debugger');
 router.post('/',function(req,res){
     console.log("received /");
     console.dir(req.headers['x-shopify-topic']);
+    console.dir(`HMAC:${req.headers[x-shopify-hmac-sha256]} `);
     console.dir(JSON.stringify(req.headers));
     console.log(JSON.stringify(req.body));
    loggerdebug.debug("Received a customer update...");

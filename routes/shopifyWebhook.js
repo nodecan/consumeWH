@@ -34,10 +34,8 @@ loggererror.info('This is Error Logger');
 loggerdebug.info('This is Debugger');
 
 router.post('/',function(req,res){
-    let topic;
     console.log("received /");
-    topic = req.headers.x-shopify-topic;
-    console.log(`topic: ${topic}`);
+    console.log("topic: "+ req.headers.X-Shopify-Topic);
     console.dir(JSON.stringify(req.headers));
     console.log(JSON.stringify(req.body));
    loggerdebug.debug("Received a customer update...");

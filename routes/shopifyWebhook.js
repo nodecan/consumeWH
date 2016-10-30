@@ -33,7 +33,7 @@ loggerinfo.info('This is Information Logger');
 loggererror.info('This is Error Logger');
 loggerdebug.info('This is Debugger');
 
-router.post('/orders/updated',function(req,res){
+router.post('/customers/update',function(req,res){
     console.log("received /");
     console.dir(req.headers['x-shopify-topic']);
     console.dir(req.headers['x-shopify-hmac-sha256']);

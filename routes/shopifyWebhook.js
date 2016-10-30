@@ -34,7 +34,7 @@ loggererror.info('This is Error Logger');
 loggerdebug.info('This is Debugger');
 
 router.post('/customers/update',function(req,res){
-    console.log("received /");
+    console.log("/customers/update");
     console.dir(req.headers['x-shopify-topic']);
     console.dir(req.headers['x-shopify-hmac-sha256']);
     console.dir(JSON.stringify(req.headers));
@@ -43,7 +43,20 @@ router.post('/customers/update',function(req,res){
    loggerdebug.debug(req.body);
    res.status(200);
    res.send();
-   loggerdebug.debug("Exit from customer...");
+   loggerdebug.debug("Exit from customer update...");
+});
+
+router.post('/customers/create',function(req,res){
+    console.log("received /customers/create");
+    console.dir(req.headers['x-shopify-topic']);
+    console.dir(req.headers['x-shopify-hmac-sha256']);
+    console.dir(JSON.stringify(req.headers));
+    console.log(JSON.stringify(req.body));
+   loggerdebug.debug("Received a customer create...");
+   loggerdebug.debug(req.body);
+   res.status(200);
+   res.send();
+   loggerdebug.debug("Exit from customer create...");
 });
 
 

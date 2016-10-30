@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/', routes);
 //app.use('/users', users);
 //app.use('/webhooks',shopifyWebhook);
-app.use('/webhooks',function(){
+app.use('/customers',function(){
   console.log("inside webhooks");
   res.status(200);
    res.send();

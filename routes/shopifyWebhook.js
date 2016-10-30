@@ -35,7 +35,9 @@ loggerdebug.info('This is Debugger');
 
 router.post('/customers/update',function(req,res){
     console.log("/customers/update");
-    console.dir(req.headers['x-shopify-topic']);
+    let topic = req.headers['x-shopify-topic'];
+
+    console.dir(`${topic} : ${topic.length}`);
     console.dir(req.headers['x-shopify-hmac-sha256']);
     console.dir(JSON.stringify(req.headers));
     console.log(JSON.stringify(req.body));

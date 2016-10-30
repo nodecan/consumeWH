@@ -26,8 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/', routes);
 //app.use('/users', users);
-//app.use('/webhooks',shopifyWebhook);
-app.use('/customers',function(){
+app.use('/webhooks',shopifyWebhook);
+/*app.use('/customers',function(){
   console.log("inside webhooks");
   res.status(200);
    res.send();
@@ -37,7 +37,7 @@ app.post('/',function(req,res){
   console.log("inside post");
 res.status(200);
    res.send();
-});
+});*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
